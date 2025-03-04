@@ -17,7 +17,7 @@
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px; /* Wider container */
             width: 90%;
             text-align: center;
             background: white;
@@ -67,9 +67,10 @@
             justify-content: center;
             gap: 15px;
             margin-top: 20px;
+            flex-wrap: wrap; /* Allow images to wrap on smaller screens */
         }
         .images img {
-            max-width: 30%;
+            max-width: 45%; /* Adjusted for better spacing */
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -89,6 +90,15 @@
 <body>
     <div class="container">
         <h1>Cognitive Drone: A VLA Model and Evaluation Benchmark for Real-Time Cognitive Task Solving and Reasoning in UAVs</h1>
+
+        <!-- Images at the start -->
+        <div class="images">
+            <img src="teaser.png" alt="Teaser">
+            <img src="system_architecture.png" alt="Architecture">
+            <img src="examples.png" alt="Examples">
+            <img src="benchmark_results.png" alt="Benchmark Results">
+        </div>
+
         <p>Welcome to the official project page for the <strong>Cognitive Drone</strong> dataset and benchmark. This project focuses on advancing real-time cognitive task solving and reasoning in Unmanned Aerial Vehicles (UAVs) using Vision-Language-Action (VLA) models.</p>
 
         <div class="authors">
@@ -107,16 +117,6 @@
             <li><a href="https://arxiv.org" target="_blank">arXiv Preprint</a></li>
             <li><a href="https://www.journal.com" target="_blank">Journal Article</a></li>
         </ul>
-
-        <h2>Example Images</h2>
-        <p>Below are some example images from the Cognitive Drone dataset:</p>
-        <div class="images">
-            <img src="teaser.png" alt="Teaser">
-            <img src="system_architecture.png" alt="Architecture">
-            <img src="examples.png" alt="Examples">
-            <img src="benchmark_results.png" alt="Benchmark Results">
-
-        </div>
     </div>
 
     <footer>
