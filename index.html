@@ -3,116 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cognitive Drone: A VLA Model and Evaluation Benchmark</title>
+    <title>Cognitive Drone: VLA Model & Benchmark</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f0f2f5 0%, #ffffff 100%);
+            color: #2d3748;
+            padding: 20px;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-            background-color: #f4f4f9;
-            color: #333;
         }
+
         .container {
-            max-width: 1200px; /* Wider container */
-            width: 90%;
-            text-align: center;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            flex: 1;
         }
+
         h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-align: center;
         }
+
         h2 {
-            color: #34495e;
-            font-size: 1.8em;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            font-size: 1.75rem;
+            color: #2b6cb0;
+            margin: 2rem 0 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
         }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: #2b6cb0;
+            border-radius: 2px;
+        }
+
         p {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #555;
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 1rem;
+            text-align: justify;
         }
+
+        .authors {
+            font-style: italic;
+            color: #718096;
+            text-align: center;
+            padding: 1rem 0;
+            background: #f7fafc;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 2rem 0;
+        }
+
+        .images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .images img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
         a {
-            color: #3498db;
+            color: #2b6cb0;
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
+
         a:hover {
-            color: #2980b9;
+            color: #2c5282;
+            text-decoration: underline;
         }
+
         ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin: 10px 0;
-        }
-        .authors {
-            font-size: 1.2em;
-            color: #7f8c8d;
-            margin-top: 20px;
-        }
-        .images {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-            flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-        }
-        .images img {
-            max-width: 45%; /* Adjusted for better spacing */
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-        .images img:hover {
-            transform: scale(1.05);
-        }
-        footer {
-            margin-top: 40px;
+            list-style: none;
+            padding-left: 0;
             text-align: center;
-            color: #777;
-            font-size: 0.9em;
+        }
+
+        ul li {
+            margin: 0.75rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            color: #718096;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .images img {
+                height: 150px;
+            }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Cognitive Drone: A VLA Model and Evaluation Benchmark for Real-Time Cognitive Task Solving and Reasoning in UAVs</h1>
+        <h1>Cognitive Drone: A Vision-Language-Action Model & Benchmark for UAV Cognitive Reasoning</h1>
 
-        <!-- Images at the start -->
         <div class="images">
-            <img src="teaser.png" alt="Teaser">
-            <img src="system_architecture.png" alt="Architecture">
-            <img src="examples.png" alt="Examples">
+            <img src="teaser.png" alt="Project Teaser">
+            <img src="system_architecture.png" alt="System Architecture">
+            <img src="examples.png" alt="Task Examples">
             <img src="benchmark_results.png" alt="Benchmark Results">
         </div>
 
-        <p>Welcome to the official project page for the <strong>Cognitive Drone</strong> dataset and benchmark. This project focuses on advancing real-time cognitive task solving and reasoning in Unmanned Aerial Vehicles (UAVs) using Vision-Language-Action (VLA) models.</p>
+        <p>The <strong>Cognitive Drone</strong> project introduces a pioneering Vision-Language-Action (VLA) model and evaluation benchmark designed to enhance real-time cognitive task solving and reasoning capabilities in Unmanned Aerial Vehicles (UAVs). This initiative aims to push the boundaries of autonomous drone technology.</p>
 
         <div class="authors">
-            <p><strong>Authors:</strong> Artem Lykov, Valerii Serpiva, Muhammad Haris Khan, Oleg Sautenkov, Artyom Myshlyaev, Grik Tadevosyan, Yasheerah Yaqoot, and Dzmitry Tsetserukou</p>
+            <p><strong>Authors:</strong> Artem Lykov, Valerii Serpiva, Muhammad Haris Khan, Oleg Sautenkov, Artyom Myshlyaev, Grik Tadevosyan, Yasheerah Yaqoot, Dzmitry Tsetserukou</p>
         </div>
 
         <h2>Dataset</h2>
-        <p>Access the dataset on Hugging Face:</p>
+        <p>Discover our comprehensive dataset hosted on Hugging Face:</p>
         <ul>
-            <li><a href="https://huggingface.com/datasets/ArtemLykov/cognitiveDrone_dataset" target="_blank">Cognitive Drone Dataset on Hugging Face</a></li>
+            <li><a href="https://huggingface.com/datasets/ArtemLykov/cognitiveDrone_dataset" target="_blank">Cognitive Drone Dataset</a></li>
         </ul>
 
-        <h2>Research Papers</h2>
-        <p>Explore the research behind this project:</p>
+        <h2>Publications</h2>
+        <p>Dive into the research supporting this project:</p>
         <ul>
             <li><a href="https://arxiv.org" target="_blank">arXiv Preprint</a></li>
             <li><a href="https://www.journal.com" target="_blank">Journal Article</a></li>
@@ -120,7 +182,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2023 Cognitive Drone Project. All rights reserved.</p>
+        <p>© 2025 Cognitive Drone Project. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
