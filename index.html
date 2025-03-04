@@ -6,62 +6,117 @@
     <title>Cognitive Drone: A VLA Model and Evaluation Benchmark</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        h1 {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f4f4f9;
             color: #333;
         }
+        .container {
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #34495e;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
         a {
-            color: #0366d6;
+            color: #3498db;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
         a:hover {
-            text-decoration: underline;
+            color: #2980b9;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        .authors {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-top: 20px;
         }
         .images {
             display: flex;
-            gap: 10px;
+            justify-content: center;
+            gap: 15px;
             margin-top: 20px;
         }
         .images img {
-            max-width: 100%;
+            max-width: 30%;
             height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .images img:hover {
+            transform: scale(1.05);
         }
         footer {
             margin-top: 40px;
             text-align: center;
             color: #777;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <h1>Cognitive Drone: A VLA Model and Evaluation Benchmark for Real-Time Cognitive Task Solving and Reasoning in UAVs</h1>
-    <p>Welcome to the official project page for the <strong>Cognitive Drone</strong> dataset and benchmark. This project focuses on advancing real-time cognitive task solving and reasoning in Unmanned Aerial Vehicles (UAVs) using Vision-Language-Action (VLA) models.</p>
+    <div class="container">
+        <h1>Cognitive Drone: A VLA Model and Evaluation Benchmark for Real-Time Cognitive Task Solving and Reasoning in UAVs</h1>
+        <p>Welcome to the official project page for the <strong>Cognitive Drone</strong> dataset and benchmark. This project focuses on advancing real-time cognitive task solving and reasoning in Unmanned Aerial Vehicles (UAVs) using Vision-Language-Action (VLA) models.</p>
 
-    <h2>Dataset</h2>
-    <p>Access the dataset on Hugging Face:</p>
-    <ul>
-        <li><a href="https://huggingface.com/datasets/ArtemLykov/cognitiveDrone_dataset" target="_blank">Cognitive Drone Dataset on Hugging Face</a></li>
-    </ul>
+        <div class="authors">
+            <p><strong>Authors:</strong> Artem Lykov, Valerii Serpiva, Muhammad Haris Khan, Oleg Sautenkov, Artyom Myshlyaev, Grik Tadevosyan, Yasheerah Yaqoot, and Dzmitry Tsetserukou</p>
+        </div>
 
-    <h2>Research Papers</h2>
-    <p>Explore the research behind this project:</p>
-    <ul>
-        <li><a href="https://arxiv.org" target="_blank">arXiv Preprint</a></li>
-        <li><a href="https://www.journal.com" target="_blank">Journal Article</a></li>
-    </ul>
+        <h2>Dataset</h2>
+        <p>Access the dataset on Hugging Face:</p>
+        <ul>
+            <li><a href="https://huggingface.com/datasets/ArtemLykov/cognitiveDrone_dataset" target="_blank">Cognitive Drone Dataset on Hugging Face</a></li>
+        </ul>
 
-    <h2>Example Images</h2>
-    <p>Below are some example images from the Cognitive Drone dataset:</p>
-    <div class="images">
-        <img src="image1.jpg" alt="Example Image 1">
-        <img src="image2.jpg" alt="Example Image 2">
-        <img src="image3.jpg" alt="Example Image 3">
+        <h2>Research Papers</h2>
+        <p>Explore the research behind this project:</p>
+        <ul>
+            <li><a href="https://arxiv.org" target="_blank">arXiv Preprint</a></li>
+            <li><a href="https://www.journal.com" target="_blank">Journal Article</a></li>
+        </ul>
+
+        <h2>Example Images</h2>
+        <p>Below are some example images from the Cognitive Drone dataset:</p>
+        <div class="images">
+            <img src="teaser.png" alt="Teaser">
+            <img src="system_architecture.png" alt="Architecture">
+            <img src="examples.png" alt="Examples">
+            <img src="benchmark_results.png" alt="Benchmark Results">
+
+        </div>
     </div>
 
     <footer>
