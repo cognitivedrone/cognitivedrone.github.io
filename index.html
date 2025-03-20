@@ -155,7 +155,7 @@
             display: flex;
         }
 
-        /* Video styling */
+        /* Video container styling */
         .video-container {
             display: flex;
             justify-content: center;
@@ -163,9 +163,11 @@
             margin: 2rem 0;
         }
 
-        video {
-            max-width: 100%;
-            height: auto;
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
@@ -186,11 +188,19 @@
             .images img {
                 height: 150px;
             }
+
+            iframe {
+                height: 300px;
+            }
         }
 
         @media (max-width: 480px) {
             .images img {
                 height: 120px;
+            }
+
+            iframe {
+                height: 200px;
             }
         }
     </style>
@@ -213,12 +223,14 @@
             <p><strong>Research Team:</strong> Artem Lykov, Valerii Serpiva, Muhammad Haris Khan, Oleg Sautenkov, Artyom Myshlyaev, Grik Tadevosyan, Yasheerah Yaqoot, Dzmitry Tsetserukou</p>
         </div>
 
-        <!-- Video Section -->
+        <!-- Embedded YouTube Video -->
         <div class="video-container">
-            <video controls>
-                <source src="3_CogVideo_Voiced(1).mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe
+                src="https://www.youtube.com/embed/7SfSzeMGrBE"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
         </div>
 
         <div class="abstract">
